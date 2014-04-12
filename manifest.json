@@ -1,0 +1,29 @@
+{
+    "name": "Gohper",
+    "version": "1.0",
+    "manifest_version": 2,
+    "description": "Bury and find stuff",
+    "content_scripts": [{
+        "js": ["js/word.js"],
+        "matches": ["http://*/*",
+                    "https://*/*"],
+        "css": []
+    }],
+    "icons": {
+        "16"    : "img/gopher.png",
+        "48"    : "img/gopher.png",
+        "128"   : "img/gopher.png"
+    },
+
+    "browser_action" : {
+        "default_icon"    : "img/gopher.png",
+        "default_popup"   : "popup.html"
+    },
+
+    "background"    : {
+        "scripts"    : ["js/background_script.js"]
+    },
+
+    "web_accessible_resources": [
+    ]
+}
